@@ -1,0 +1,38 @@
+<div class="container">
+
+
+
+    <div [ngSwitch]="alerta">
+
+
+        <div class="alert alert-success" *ngSwitchCase="'success'" role="alert">
+            <strong>SUCCES</strong>
+        </div>
+        <div class="alert alert-danger" *ngSwitchDefault role="alert">
+            <strong>DANGER</strong>
+        </div>
+        <div class="alert alert-warning" *ngSwitchCase="'warning'" role="alert">
+            <strong>WARNING</strong> </div>
+        <div class="alert alert-info" *ngSwitchCase="'info'" role="alert">
+            <strong>INFO</strong>
+        </div>
+    </div>
+    <div class="container mr-5">
+        <button class=" ml-2 mr-1  btn btn-otuline btn-primary" (click)='alerta="info"'>
+       INFO
+    </button>
+        <button class=" mr-1   btn btn-otuline btn-success" (click)='alerta="success"'>
+        SUCCES
+    </button>
+        <button class=" mr-1   btn btn-otuline btn-danger" (click)='alerta="danger"'>
+        DANGER
+    </button>
+
+        <button class=" btn btn-otuline btn-warning" (click)='alerta="warning"'>
+     WARNING
+    </button>
+    </div>
+
+
+
+</div>

@@ -1,0 +1,38 @@
+<div [ngClass]="alerta" class="alert " role="alert">
+    <strong>Clickea</strong> el boton y cambio de color
+</div>
+<button class=" mr-1   btn btn-otuline btn-primary" (click)='alerta="alert-info"'>
+        <strong>A</strong>
+</button>
+
+<button class="mr-1 btn btn-otuline btn-danger" (click)="alerta='alert-danger' ">
+    <strong>R</strong> 
+</button>
+<button class=" btn btn-otuline btn-success" (click)="alerta='alert-success' ">
+    <strong>V</strong>
+</button>
+
+
+<br>
+<br>
+
+
+<h3 [ngClass]="{'text-danger':propiedades.danger, 'text-success':! propiedades.danger }">
+    Hola mundo
+</h3>
+<button class=" btn btn-otuline " [ngClass]="{'btn-danger': propiedades.danger, 'btn-success':!propiedades.danger}" (click)="propiedades.danger=!propiedades.danger ">
+    <strong class='ml-2'>Cambiar</strong>
+</button>
+
+
+<br>
+<br>
+
+<h3>Proceso asincrono</h3>
+
+<button type="button" class="btn  btn-primary" (click)="ejecutar()" [disabled]="loading">
+    <i [ngClass]="{'fa-save': !loading , 'fa-refresh fa-spin': loading}" 
+    class="fa "></i>
+    <span *ngIf="!loading">  Guardar Cambios</span> 
+    <span *ngIf=" loading"> Guardando...</span>
+</button>
