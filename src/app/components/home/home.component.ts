@@ -3,18 +3,38 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-home',
   template: `
-   
-    <app-ng-style></app-ng-style> 
-
-    <app-css></app-css>
-
-    <p>Hola mundo desde APP-COMPONENT</p> 
-
-    <app-clases></app-clases> 
-    
-    <p [appResaltado]="'blue'"> Hola directiva </p> 
-
-    <app-ng-switch></app-ng-switch>
+       <br>
+       <br>
+       <div class="block">
+      <app-ng-style></app-ng-style> 
+      </div>
+      <br>
+      <br>
+    <div class="block">
+      <app-css></app-css>
+      </div>
+      <br>
+      <br>
+  <div class="block">
+      <p>Hola mundo desde APP-COMPONENT</p> 
+      </div>
+      <br>
+      <br>
+  <div class="block">
+      <app-clases></app-clases> 
+      </div>
+      <br>
+      <br>
+      <div class="block">
+      <p [appResaltado]="'blue'"> Hola directiva </p> 
+      </div>
+      <br>
+      <br>
+  <div class="block">
+      <app-ng-switch></app-ng-switch>
+      </div>
+      <br>
+      <br>
 
 
 
